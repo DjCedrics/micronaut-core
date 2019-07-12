@@ -66,7 +66,7 @@ TIP: The output produced by Jackson can be customized in a variety of manners, f
 
 The Jackson ObjectMapper can be configured through normal configuration with the api:io.micronaut.jackson.JacksonConfiguration[] class.
 
-All jackson configuration keys start with `jackson`.
+All jackson configuration keys start with `jackson`. 
 
 |=======
 | dateFormat | String | The date format
@@ -76,6 +76,16 @@ All jackson configuration keys start with `jackson`.
 | propertyNamingStrategy | String | Name of an instance of link:{jackson-databind}com/fasterxml/jackson/databind/PropertyNamingStrategy.html[PropertyNamingStrategy]. Example: `SNAKE_CASE`
 | defaultTyping          | String | The global defaultTyping for polymorphic type handling from enum link:{jackson-databind}com/fasterxml/jackson/databind/ObjectMapper.DefaultTyping.html[ObjectMapper.DefaultTyping]. Example: `NON_FINAL`
 |=======
+
+Note that jackson configuration keys should be written in kebab case (lowercase and hyphen-separated).
+
+Example:
+
+[source,yaml]
+----
+jackson:
+    serialization-inclusion: ALWAYS
+----
 
 === Features
 
