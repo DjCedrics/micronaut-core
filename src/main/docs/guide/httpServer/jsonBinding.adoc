@@ -77,6 +77,16 @@ All jackson configuration keys start with `jackson`.
 | defaultTyping          | String | The global defaultTyping for polymorphic type handling from enum link:{jackson-databind}com/fasterxml/jackson/databind/ObjectMapper.DefaultTyping.html[ObjectMapper.DefaultTyping]. Example: `NON_FINAL`
 |=======
 
+Note that jackson configuration keys should be written in kebab case (lowercase and hyphen-separated).
+
+Example:
+
+[source,yaml]
+----
+jackson:
+    serialization-inclusion: ALWAYS
+----
+
 === Features
 
 All features can be configured with their name as the key and a boolean to indicate enabled or disabled.
